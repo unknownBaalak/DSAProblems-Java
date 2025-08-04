@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class SetAndHashSet {
+    public static void main(String[] args) {
+
+        Set<String> names = new HashSet<>();
+
+        names.add("Walter");
+        names.add("Jesse");
+        names.add("Skyler");
+        names.add("Mike");
+        names.add("Saul");
+
+        System.out.println(names);
+
+        // Method to transverse the set
+
+        // For-each loop (enhanced for loop)
+        for (String name: names) {
+            System.out.println(name);
+        }
+
+        // Lambda method
+        names.forEach(System.out::println);
+
+        // Iterator method
+        Iterator<String> namesIterator = names.iterator();
+        while (namesIterator.hasNext()) {
+            System.out.println(namesIterator.next());
+        }
+
+
+        /* Why do we use set if almost every function is same as List??
+        Reason: It's because whenever we want to solve problems and find if there are duplicates or not/ or to remove duplicates
+        from the data because set doesn't contain duplicates even if passed explicitly it doesn't.
+        */
+
+        // Example (Removing duplicates)
+        List<Integer> numberList = new ArrayList<>();
+        numberList.add(3);
+        numberList.add(2);
+        numberList.add(1);
+        numberList.add(2);
+        numberList.add(3);
+
+        System.out.println(numberList);
+
+        Set<Integer> numberSet = new HashSet<>(numberList);
+        System.out.println(numberSet);
+    }
+}

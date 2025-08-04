@@ -1,6 +1,16 @@
 # Compiled class file
 *.class
 
+# IDEA project configuration folder
+.idea/
+
+# IntelliJ IDEA Module files
+*.iml
+
+# Ignore compiled bytecode and build artifacts
+out/
+*.class
+
 # Log file
 *.log
 

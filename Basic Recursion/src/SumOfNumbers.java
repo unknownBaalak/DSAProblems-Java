@@ -20,7 +20,7 @@ public class SumOfNumbers {
         return (i + sum0(i + 1, n));
     }
 
-    // My 2nd Approach
+    // My 2nd approach
     static int sum1(int n) {
         if (n < 0) {
             return 0;

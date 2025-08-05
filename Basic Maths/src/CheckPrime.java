@@ -9,7 +9,6 @@ public class CheckPrime {
     }
 
     static boolean isPrime(int n) {
-
         if (n == 1) {
             return false;
         }
@@ -19,7 +18,6 @@ public class CheckPrime {
                 return false;
             }
         }
-
         return true;
     }
 }

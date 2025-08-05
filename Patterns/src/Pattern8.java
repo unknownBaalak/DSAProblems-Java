@@ -2,17 +2,16 @@ import java.util.Scanner;
 
 public class Pattern8 {
     public static void main(String[] args) {
-        // Taking input
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter a number: ");
         int number = in.nextInt();
-
-        // Calling function!
-        pattern(number);
+        pattern0(number);
+        pattern1(number);
     }
 
-    static void pattern(int number) {
-        // My method
+    // My method
+    static void pattern0(int number) {
+
         for (int i = number; i > 0; i--) {
             // Space
             for(int j = 0; j <= number - i - 1; j++) {
@@ -30,8 +29,10 @@ public class Pattern8 {
             }
             System.out.println();
         }
+    }
 
-        // Striver's method
+    // Striver's method
+    static void pattern1(int number) {
         for (int i = 0; i < number; i++) {
             // Space
             for(int j = 0; j < i; j++) {

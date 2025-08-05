@@ -2,17 +2,15 @@ import java.util.Scanner;
 
 public class Pattern14 {
     public static void main(String[] args) {
-        // Taking input
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter n: ");
         int n = in.nextInt();
-
-        // Calling function!
-        pattern(n);
+        pattern0(n);
+        pattern1(n);
     }
 
-    static void pattern(int n) {
-        // My method
+    // My method
+    static void pattern0(int n) {
         char letter = 'A';
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
@@ -20,8 +18,10 @@ public class Pattern14 {
             }
             System.out.println();
         }
+    }
 
-        // Striver's method
+    // Striver's method
+    static void pattern1(int n) {
         for (int i = 0; i < n; i++) {
             for (char ch = 'A'; ch <= 'A' + i; ch++) {
                 System.out.print(ch + " ");

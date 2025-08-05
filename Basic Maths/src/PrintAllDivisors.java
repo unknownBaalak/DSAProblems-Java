@@ -12,8 +12,8 @@ public class PrintAllDivisors {
     }
 
     public static void printDivisors(int n) {
-
         List<Integer> divisors = new ArrayList<>();
+
         for (int i = 1; Math.sqrt(n) >= i; i++) {
             if (n % i == 0) {
                 divisors.add(i);
@@ -25,7 +25,6 @@ public class PrintAllDivisors {
         }
 
         Collections.sort(divisors);
-
         for (int divisor : divisors) {
             System.out.print(divisor + " ");
         }

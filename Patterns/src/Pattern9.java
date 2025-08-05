@@ -2,14 +2,11 @@ import java.util.Scanner;
 
 public class Pattern9 {
     public static void main(String[] args) {
-        // Taking input
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter a number: ");
         int number = in.nextInt();
-
-        // Calling function!
         upperPattern(number);
-//        lowerPattern(number);
+        lowerPattern(number);
     }
 
     static void upperPattern(int number) {

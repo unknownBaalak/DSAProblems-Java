@@ -2,16 +2,13 @@ import java.util.Scanner;
 
 public class Pattern20 {
     public static void main(String[] args) {
-        // Taking input
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter n: ");
         int n = in.nextInt();
-
-        // Calling function!
-//        upperPattern(n);
-//        lowerPattern(n);
-//        pattern(n);
-        myUpdatedPattern(n);
+        upperPattern(n);
+        lowerPattern(n);
+        pattern(n);
+        updatedPattern(n);
     }
 
     // My method
@@ -81,7 +78,8 @@ public class Pattern20 {
         }
     }
 
-    static void myUpdatedPattern(int n) {
+    // My updated method
+    static void updatedPattern(int n) {
         for (int i = 1; i <= 2 * n - 1; i++) {
             int stars = i <= n ? i : 2 * n - i;
             int spaces = 2 * (n - stars);
@@ -94,7 +92,6 @@ public class Pattern20 {
 
             // Stars
             for (int j = 1; j <= stars; j++) System.out.print("*");
-
             System.out.println();
         }
     }

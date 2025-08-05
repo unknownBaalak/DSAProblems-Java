@@ -11,7 +11,6 @@ public class ArmstrongNumber {
     static boolean armstrongNumber(int n) {
         int original = n;
         int digits = 0;
-
         while (n > 0) {
             digits++;
             n /= 10;
@@ -24,11 +23,6 @@ public class ArmstrongNumber {
             num += (int) Math.pow(remainder, digits);
             n /= 10;
         }
-
-        if (num == original) {
-            return true;
-        } else {
-            return false;
-        }
+        return num == original;
     }
 }

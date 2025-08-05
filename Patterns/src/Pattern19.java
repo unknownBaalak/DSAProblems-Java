@@ -2,14 +2,11 @@ import java.util.Scanner;
 
 public class Pattern19 {
     public static void main(String[] args) {
-        // Taking input
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter n: ");
         int n = in.nextInt();
-
-        // Calling function!
         pattern0(n);
-//        pattern1(n);
+        pattern1(n);
     }
 
     static void pattern0(int n) {
@@ -51,8 +48,8 @@ public class Pattern19 {
         }
     }
 
+    // Striver's method
     static void pattern1(int n) {
-        // Striver's method
         int iniS = 0;
         for (int i = 0; i < n; i++) {
             // Stars
@@ -73,7 +70,7 @@ public class Pattern19 {
             System.out.println();
         }
 
-        iniS = 8;
+        iniS = 2 * n - 2;
         for (int i = 1; i <= n; i++) {
             // Stars
             for (int j = 1; j <= i; j++) {

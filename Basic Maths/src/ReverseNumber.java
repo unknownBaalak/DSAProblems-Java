@@ -9,22 +9,20 @@ public class ReverseNumber {
     }
 
     public static int reverse(int x) {
-        int original = x;
-        int reverseNumber = 0;
+        int reversedNumber = 0;
+        while (x != 0) {
+            int remainder = x % 10;
 
-        int absolute = Math.abs(x);
-        while (absolute > 0) {
-            int remainder = absolute % 10;
-            reverseNumber = reverseNumber * 10 + remainder;
-            absolute /= 10;
+            if (reversedNumber > Integer.MAX_VALUE / 10 || (reversedNumber == Integer.MAX_VALUE / 10 && remainder > 7)) {
+                return 0;
+            }
+            if (reversedNumber < Integer.MIN_VALUE / 10 || (reversedNumber == Integer.MIN_VALUE / 10 && remainder < -8)) {
+                return 0;
+            }
+
+            reversedNumber = reversedNumber * 10 + remainder;
+            x /= 10;
         }
-
-        if (original < 0) {
-            reverseNumber = -reverseNumber;
-        } else {
-            return reverseNumber;
-        }
-
-        return reverseNumber;
+        return reversedNumber;
     }
 }

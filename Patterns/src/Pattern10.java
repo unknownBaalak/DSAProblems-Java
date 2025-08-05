@@ -2,12 +2,9 @@ import java.util.Scanner;
 
 public class Pattern10 {
     public static void main(String[] args) {
-        // Taking input
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter a number: ");
         int number = in.nextInt();
-
-        // Calling function!
         pattern(number);
     }
 
